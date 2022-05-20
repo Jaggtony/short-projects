@@ -1,7 +1,10 @@
 async function getACuteDogPhoto(){
-    const res = await fetch('https://dog.ceo/api/breeds/image/random')
+    try{const res = await fetch('https://dog.ceo/api/breeds/image/random')
     const data = await res.json()
-    console.log(data)  //add tri catch block
+    console.log(data)
+  } catch(error) {
+    console.error(error)
+  } //add tri catch block
 }
 
 getACuteDogPhoto()
